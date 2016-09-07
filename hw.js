@@ -8,15 +8,18 @@ module.exports = {
      * A valid name includes alphabetic characters or hyphens, and must
      * be at least two characters long.
      */
-    name: function (input) {},
-
+    name: function (input) {
+        let heisse = new RegExp('^[A-Za-z\-]+ [A-Za-z\-]+$');
+        test.name();
+    },
     /**
      * A valid phone number may or may not include an area code. If it
      * does, it should be a total of ten digits. If it doesn't, it should
      * be a total of seven digits.
      */
     phone: function (input) {
-
+        let telefone = new RegExp('^[0-9\-\()]{3} [0-9 \- ]{3} [0-9]{4}$');
+        test.phone();
     },
     /**
      * A valid email address includes alphanumeric characters, underscores, 
@@ -24,7 +27,8 @@ module.exports = {
      * domain name.
      */
     email: function (input) {
-
+        let mail = new RegExp('^[a-zA-Z0-9]+\@[A-Za-z]+\.[a-zA-Z]+$');
+        test.email();
     },
     /**
      * A valid street address includes a building number, followed by a 
@@ -33,14 +37,16 @@ module.exports = {
      * other information.
      */
     address: function (input) {
-
+        let addr = new RegExp('^[0-9]+ [a-zA-Z ]+ [a-zA-Z]{2,4}$')
+        test.address
     },
     /**
      * A valid username is between four and sixteen characters long and
      * can contain numbers or letters. It must start with a letter.
      */
     username: function (input) {
-
+        let user = new RegExp('^[A-Za-z0-9\-\_]{4,16}$');
+        test.username();
     },
     /**
      * A valid URL contains the protocol (http, https) as well as a valid
@@ -48,7 +54,8 @@ module.exports = {
      * may not end with a file name.
      */
     url: function (input) {
-
+        let web = new RegExp('^[a-z0-9\:\/\.]+$');
+        test.url();
     },
 
     /**
@@ -56,6 +63,6 @@ module.exports = {
      * each section. Each section can include from one to three digits.
      */
     ipaddr: function (input) {
-
+        let ip = new RegExp('^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$')
     },
 };

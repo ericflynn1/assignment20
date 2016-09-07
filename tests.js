@@ -33,7 +33,7 @@ test('valid fields are valid', function (current) {
     }
 });
 
-test.only('invalid fields are invalid', function (current) {
+test('invalid fields are invalid', function (current) {
     for (let i = 0; i < data.invalid.name.length; i++) {
         current.false(validation.name(data.invalid.name[i]));
     }
